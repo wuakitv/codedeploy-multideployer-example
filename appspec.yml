@@ -6,6 +6,7 @@ files:
     destination: /var/tmp/multideployer/
 permissions: {}
 hooks:
+  # Always run codedeploy-multideployer in the AfterInstall hook
   AfterInstall:
     - location: deploy/after_install.sh
       # Provide enough time for all the applications to be deployed
