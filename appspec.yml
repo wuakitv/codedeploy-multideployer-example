@@ -1,0 +1,12 @@
+---
+version: 0.0
+os: linux
+files:
+  - source: /multideployer.yaml
+    destination: /var/tmp/multideployer/
+permissions: {}
+hooks:
+  AfterInstall:
+    - location: deploy/after_install.sh
+      timeout: 1800
+      runas: root
