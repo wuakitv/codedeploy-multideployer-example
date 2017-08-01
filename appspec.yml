@@ -8,5 +8,6 @@ permissions: {}
 hooks:
   AfterInstall:
     - location: deploy/after_install.sh
+      # Provide enough time for all the applications to be deployed
       timeout: 1800
       runas: root
